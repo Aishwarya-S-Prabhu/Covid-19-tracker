@@ -1,4 +1,9 @@
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*To box model */
+  }
+  
 body{
     
     background-color: black;
@@ -13,8 +18,7 @@ body{
         #302c2e 51%,
         #a09a99 100%
     );
-    
-    
+    border-radius: 0 0 20px 20px;
 }
 .nav-sub{
     display: flex;
@@ -37,6 +41,8 @@ a:hover{
     max-width: 100%;
     padding: 0 20px;
     margin: 0 auto;
+    margin-top: 20px;
+    height: 300px;
 }
 
 .table-style{
@@ -47,12 +53,26 @@ a:hover{
     align-items: center;
     margin: auto;
     margin-top: 30px;
+    font-size: 20px;
 }
-.table-style:hover{
+.tab-body:hover{
     background-color:lightgray;
     color: black;
 }
-
+.button{
+    width: 300px;
+    font-size: 20px;
+    background-color: darkgray;
+    border-radius: 10px;
+    margin-left: 480px;
+}
+.button:hover{
+    background-color: darkslategray;
+    
+}
+.button:focus{
+    background-color: lightyellow;
+}
 .foot{
     margin-top: 30PX;
     background-image: linear-gradient(
@@ -61,7 +81,7 @@ a:hover{
         #302c2e 51%,
         #a09a99 100%
     );
-    
+    border-radius: 20px 20px 0 0;
 }
 
 .contact{

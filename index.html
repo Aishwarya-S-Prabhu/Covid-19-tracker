@@ -30,38 +30,80 @@
         <table class="table-style">
             <thead>
                 <tr>
-                    <th>Total Number of cases</th>
-                    <th>Total Number of deaths</th>
-                    <th>Total Number of recovered</th>
+                    <th>Total Cases</th>
+                    <th>Total Deaths</th>
+                    <th>Total Recovered</th>
+                    <th>Date</th>
                 </tr>
                
             </thead>
-            <tbody>
-                <tr>
-                    <td>1230</td>
-                    <td>132</td>
-                    <td>893</td>
+            <tbody class="tab-body">
+                <tr id="data">
+                    
                 </tr>
             </tbody>
             <tbody>
 
             </tbody>
         </table>
+        <br>
+        <br>
+        <button class="button" onclick="refresh()">Refresh Data</button>
     </main>
     <footer class="foot">
         <div>
 
         </div>
+        <h1>Contact</h1>
+        <br>
         <div class="contact">
-            <h3>Contact</h3>
             <img src="./assets/facebook-circle-fill.png" alt="fb icon" />
             <img src="./assets/instagram-fill.png" alt="insta icon" />
             <img src="./assets/twitter-fill.png" alt="twitter icon" />
             <img src="./assets/linkedin-box-fill.png" alt="linkedln icon" />
         </div>
+        <br>
     </footer>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script >
 
+       // $(document).ready(function(){
+            init()
+
+
+            function init(){
+                var url =" https://api.covid19api.com/summary"
+
+                var data = ''
+
+                $.get(url,function(data){
+                    console.log(data.Global.NewDeaths);
+
+                    data= `
+                    
+                    <td>${data.Global.TotalConfirmed} </td>
+                    <td>${data.Global.TotalDeaths} </td>
+                    <td>${data.Global.TotalRecovered} </td>
+                    <td>${data.Global.Date} </td>
+                    `
+
+                    $("#data").html(data)
+
+                })
+            }
+
+            function refresh(){
+                clearData()
+                init()
+            }
+
+            function clearData(){
+                $("#data").empty()
+
+            }
+       // })
+        
+
     </script>
-</body>
 </html>
