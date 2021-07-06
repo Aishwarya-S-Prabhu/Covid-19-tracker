@@ -128,13 +128,14 @@ a:hover{
     background-image: linear-gradient(
         to right,
         #5a5756 0%,
-        #302c2e 51%,
-        #a09a99 100%
+        #867d82 51%,
+        #dfd6d5 100%
     );
     background-size: cover;
       transform: skewY(-3deg);
     z-index: -2;
     padding: 10px;
+    color: black;
 }
 .symp-image{
     padding: 40px;
