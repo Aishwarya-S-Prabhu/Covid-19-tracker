@@ -119,6 +119,10 @@ a:hover{
     background-color: blanchedalmond;
 }
 /*precautions*/
+#symp{
+    margin-bottom: 80px;
+    margin-top: 30px;
+}
 .symp-text{
     font-size: 16px;
     top: 0;
